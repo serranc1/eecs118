@@ -7,40 +7,40 @@ from math import*
 def set_value(name, value):
     name = value
 def set_vertex(name, x, y):
-    name = Point[x,y]
+    name = Pofloat[x,y]
 def get_value(name):
     return name
 def get_all():
     return {a1, a2, a3, a4, a5, a6, a7, a8, s1, s2, s3, s4, s5, s6, s7, s8, ar1, ar2}
 def main():
     win = GraphWin("Problem Set R #3", 800, 500)
-    ia1=Entry(Point(150,50),10)
-    ia2=Entry(Point(150,75),10)
-    ia3 = Entry(Point(150,100),10)
-    ia4 = Entry(Point(150,125),10)
-    ia5 = Entry(Point(150,150),10)
-    ia6 = Entry(Point(150,175),10)
-    ia7 = Entry(Point(150,200),10)
-    ia8 = Entry(Point(150,225),10)
-    iar1 = Entry(Point(150,250),10)
-    iar2 = Entry(Point(150,275),10)
-    ip1 = Entry(Point(150,300),10)
-    ip2 = Entry(Point(150,325),10)
-    is1 = Entry(Point(300,50),10)
-    is2 = Entry(Point(300,75),10)
-    is3 = Entry(Point(300,100),10)
-    is4 = Entry(Point(300,125),10)
-    is5 = Entry(Point(300,150),10)
-    is6 = Entry(Point(300,175),10)
-    is7 = Entry(Point(300,200),10)
-    is8 = Entry(Point(300,225),10)
-    ih1 = Entry(Point(300,250),10)
-    ih2 = Entry(Point(300,275),10)
-    ih3 = Entry(Point(300,300),10)
-    ih4 = Entry(Point(300,325),10)
-    ih5 = Entry(Point(300,350),10)
-    ih6 = Entry(Point(300,375),10)
-    rect=Rectangle(Point(50,25),Point(750,450)).draw(win)
+    ia1=Entry(Pofloat(150,50),10)
+    ia2=Entry(Pofloat(150,75),10)
+    ia3 = Entry(Pofloat(150,100),10)
+    ia4 = Entry(Pofloat(150,125),10)
+    ia5 = Entry(Pofloat(150,150),10)
+    ia6 = Entry(Pofloat(150,175),10)
+    ia7 = Entry(Pofloat(150,200),10)
+    ia8 = Entry(Pofloat(150,225),10)
+    iar1 = Entry(Pofloat(150,250),10)
+    iar2 = Entry(Pofloat(150,275),10)
+    ip1 = Entry(Pofloat(150,300),10)
+    ip2 = Entry(Pofloat(150,325),10)
+    is1 = Entry(Pofloat(300,50),10)
+    is2 = Entry(Pofloat(300,75),10)
+    is3 = Entry(Pofloat(300,100),10)
+    is4 = Entry(Pofloat(300,125),10)
+    is5 = Entry(Pofloat(300,150),10)
+    is6 = Entry(Pofloat(300,175),10)
+    is7 = Entry(Pofloat(300,200),10)
+    is8 = Entry(Pofloat(300,225),10)
+    ih1 = Entry(Pofloat(300,250),10)
+    ih2 = Entry(Pofloat(300,275),10)
+    ih3 = Entry(Pofloat(300,300),10)
+    ih4 = Entry(Pofloat(300,325),10)
+    ih5 = Entry(Pofloat(300,350),10)
+    ih6 = Entry(Pofloat(300,375),10)
+    rect=Rectangle(Pofloat(50,25),Pofloat(750,450)).draw(win)
     ia1.draw(win)
     ia2.draw(win)
     ia3.draw(win)
@@ -67,37 +67,37 @@ def main():
     ih4.draw(win)
     ih5.draw(win)
     ih6.draw(win)
-    Text(Point(80,50),"a1").draw(win)
-    Text(Point(80,75),"a2").draw(win)
-    Text(Point(80,100),"a3").draw(win)
-    Text(Point(80,125),"a4").draw(win)
-    Text(Point(80,150),"a5").draw(win)
-    Text(Point(80,175),"a6").draw(win)
-    Text(Point(80,200),"a7").draw(win)
-    Text(Point(80,225),"a8").draw(win)
-    Text(Point(80,250),"ar1").draw(win)
-    Text(Point(80,275),"ar2").draw(win)
-    Text(Point(80,300),"p1").draw(win)
-    Text(Point(80,325),"p2").draw(win)
-    Text(Point(230,50),"s1").draw(win)
-    Text(Point(230,75),"s2").draw(win)
-    Text(Point(230,100),"s3").draw(win)
-    Text(Point(230,125),"s4").draw(win)
-    Text(Point(230,150),"s5").draw(win)
-    Text(Point(230,175),"s6").draw(win)
-    Text(Point(230,200),"s7").draw(win)
-    Text(Point(230,225),"s8").draw(win)
-    Text(Point(230,250),"h1").draw(win)
-    Text(Point(230,275),"h2").draw(win)
-    Text(Point(230,300),"h3").draw(win)
-    Text(Point(230,325),"h4").draw(win)
-    Text(Point(230,350),"h5").draw(win)
-    Text(Point(230,375),"h6").draw(win)
-    Solve=Rectangle(Point(650,100),Point(725,125)).draw(win)
-    Quit=Rectangle(Point(650,150),Point(725,175)).draw(win)
-    Text(Point(675,112.5),"Solve").draw(win)
-    Text(Point(675,162.5),"Quit").draw(win)
-    Text(Point(400,10),"Input values to solve:").draw(win)
+    Text(Pofloat(80,50),"a1").draw(win)
+    Text(Pofloat(80,75),"a2").draw(win)
+    Text(Pofloat(80,100),"a3").draw(win)
+    Text(Pofloat(80,125),"a4").draw(win)
+    Text(Pofloat(80,150),"a5").draw(win)
+    Text(Pofloat(80,175),"a6").draw(win)
+    Text(Pofloat(80,200),"a7").draw(win)
+    Text(Pofloat(80,225),"a8").draw(win)
+    Text(Pofloat(80,250),"ar1").draw(win)
+    Text(Pofloat(80,275),"ar2").draw(win)
+    Text(Pofloat(80,300),"p1").draw(win)
+    Text(Pofloat(80,325),"p2").draw(win)
+    Text(Pofloat(230,50),"s1").draw(win)
+    Text(Pofloat(230,75),"s2").draw(win)
+    Text(Pofloat(230,100),"s3").draw(win)
+    Text(Pofloat(230,125),"s4").draw(win)
+    Text(Pofloat(230,150),"s5").draw(win)
+    Text(Pofloat(230,175),"s6").draw(win)
+    Text(Pofloat(230,200),"s7").draw(win)
+    Text(Pofloat(230,225),"s8").draw(win)
+    Text(Pofloat(230,250),"h1").draw(win)
+    Text(Pofloat(230,275),"h2").draw(win)
+    Text(Pofloat(230,300),"h3").draw(win)
+    Text(Pofloat(230,325),"h4").draw(win)
+    Text(Pofloat(230,350),"h5").draw(win)
+    Text(Pofloat(230,375),"h6").draw(win)
+    Solve=Rectangle(Pofloat(650,100),Pofloat(725,125)).draw(win)
+    Quit=Rectangle(Pofloat(650,150),Pofloat(725,175)).draw(win)
+    Text(Pofloat(675,112.5),"Solve").draw(win)
+    Text(Pofloat(675,162.5),"Quit").draw(win)
+    Text(Pofloat(400,10),"Input values to solve:").draw(win)
     x=1
     while(x==1):
         response=win.getMouse()
@@ -154,53 +154,127 @@ def main():
 ##            set_value(h4,ih4.getText())
 ##            set_value(h5,ih5.getText())
 ##            set_value(h6,ih6.getText())
+##            #check for invalid input values
+##            if float(a1) + float(a2) + float(a3) != 180:
+##                prfloat('Invalid combination of angle values')
             
+            #SSS
+            if s1 != '' and s2 != '' and s3 != '':
+                a1 = math.degrees(math.acos((math.pow(float(s1),2) + math.pow(float(s2),2) - math.pow(float(s3),2))/(2*float(s1)*float(s2))))
+                a2 = math.degrees(math.acos((math.pow(float(s2),2) + math.pow(float(s3),2) - math.pow(float(s1),2))/(2*float(s2)*float(s3))))
+                a3 = 180 - float(a1) - float(a2)
+                ia1.setText(a1)
+                ia2.setText(a2)
+                ia3.setText(a3)
+            if s4 != '' and s5 != '' and s6 != '':
+                a4 = math.degrees(math.acos((math.pow(float(s4),2) + math.pow(float(s6),2) - math.pow(float(s5),2))/(2*float(s4)*float(s6))))
+                a5 = math.degrees(math.acos((math.pow(float(s4),2) + math.pow(float(s5),2) - math.pow(float(s6),2))/(2*float(s4)*float(s5))))
+                a6 = 180 - float(a4) - float(a5)
+                ia4.setText(a4)
+                ia5.setText(a5)
+                ia6.setText(a6)
+            #right triangle side solving
+            if float(a2) == 90 and s1 == '' and s2 != '' and s3 != '':
+                s1 = math.sqrt(math.pow(float(s2),2) + math.pow(float(s3),2))
+                is1.setText(s1)
+            if float(a3) == 90 and s2 == '' and s1 != '' and s3 != '':
+                s2 = math.sqrt(math.pow(float(s1),2) + math.pow(float(s3),2))
+                is2.setText(s2)
+            if float(a1) == 90 and s3 == '' and s1 != '' and s2 != '':
+                s3 = math.sqrt(math.pow(float(s1),2) + math.pow(float(s2),2))
+                is3.setText(s3)
+            if float(a6) == 90 and s4 == '' and s5 != '' and s6 != '':
+                s4 = math.sqrt(math.pow(float(s5),2) + math.pow(float(s6),2))
+                is4.setText(s4)
+            if float(a4) == 90 and s5 == '' and s4 != '' and s6 != '':
+                s5 = math.sqrt(math.pow(float(s4),2) + math.pow(float(s6),2))
+                is5.setText(s5)
+            if float(a5) == 90 and s6 == '' and s4 != '' and s5 != '':
+                s6 = math.sqrt(math.pow(float(s4),2) + math.pow(float(s5),2))
+                is6.setText(s6)
+            
+                            
+            #AAS
+            #solve for angle given two others
             if a1 == '' and a2 != '' and a3 != '':
-                a1 = 180 - int(a2) - int(a3)
+                a1 = 180 - float(a2) - float(a3)
                 ia1.setText(a1)
             if a2 == ''  and a1 != ''  and a3 != '':
-                a2 = 180 - int(a1) - int(a3)
+                a2 = 180 - float(a1) - float(a3)
                 ia2.setText(a2)
             if a3 == '' and a1 != '' and a2 != '':
-                a3 = 180 - int(a1) - int(a2)
+                a3 = 180 - float(a1) - float(a2)
                 ia3.setText(a3)
             if a4 == '' and a5 != '' and a6 != '':
-                a4 = 180 - int(a5) - int(a6)
+                a4 = 180 - float(a5) - float(a6)
                 ia4.setText(a4)
             if a5 == '' and a4 != '' and a6 != '':
-                a5 = 180 - int(a4) - int(a6)
+                a5 = 180 - float(a4) - float(a6)
                 ia5.setText(a5)
             if a6 == '' and a4 != '' and a5 != '':
-                a6 = 180 - int(a4) - int(a5)
+                a6 = 180 - float(a4) - float(a5)
                 ia6.setText(a6)
-            if int(a1) == 90 or int(a2) == 90 or int(a3) == 90:
-                if s1 == '' and s2 != '' and s3 != '':
-                    s1 = math.sqrt(math.pow(int(s2),2) + math.pow(int(s3),2))
-                    is1.setText(s1)
-                if s2 == '' and s1 != '' and s3 != '':
-                    s2 = math.sqrt(math.pow(int(s1),2) + math.pow(int(s3),2))
-                    is2.setText(s2)
-                if s3 == '' and s1 != '' and s2 != '':
-                    s3 = math.sqrt(math.pow(int(s1),2) + math.pow(int(s2),2))
-                    is3.setText(s3)
-                    
-            if int(a4) == 90 or int(a5) == 90 or int(a6) == 90:
-                if s4 == '' and s5 != '' and s6 != '':
-                    s4 = math.sqrt(math.pow(int(s5),2) + math.pow(int(s6),2))
-                    is4.setText(s4)
-                if s5 == '' and s4 != '' and s6 != '':
-                    s5 = math.sqrt(math.pow(int(s4),2) + math.pow(int(s6),2))
-                    is5.setText(s5)
-                if s6 == '' and s4 != '' and s5 != '':
-                    s6 = math.sqrt(math.pow(int(s4),2) + math.pow(int(s5),2))
-                    is6.setText(s6)
+            #ASA
+            #solve for angle given two others
+            if a1 == '' and a2 != '' and a3 != '':
+                a1 = 180 - float(a2) - float(a3)
+                ia1.setText(a1)
+            if a2 == ''  and a1 != ''  and a3 != '':
+                a2 = 180 - float(a1) - float(a3)
+                ia2.setText(a2)
+            if a3 == '' and a1 != '' and a2 != '':
+                a3 = 180 - float(a1) - float(a2)
+                ia3.setText(a3)
+            if a4 == '' and a5 != '' and a6 != '':
+                a4 = 180 - float(a5) - float(a6)
+                ia4.setText(a4)
+            if a5 == '' and a4 != '' and a6 != '':
+                a5 = 180 - float(a4) - float(a6)
+                ia5.setText(a5)
+            if a6 == '' and a4 != '' and a5 != '':
+                a6 = 180 - float(a4) - float(a5)
+                ia6.setText(a6)
+                
+            #SAS
+                
+            #SSA
+            #Triangle 1
+            if a1 != '' and a2 == '' and a3 == '' and s1 != '' and s2 == '' and s3 != '':
+                a2 = math.degrees(math.asin(float(s1)*math.sin(math.radians(float(a1)))/float(s3)))
+                a3 = 180 - float(a1) - float(a2)
+            if a1 != '' and a2 == '' and a3 == '' and s1 == '' and s2 != '' and s3 != '':
+                a3 = math.degrees(math.asin(float(s2)*math.sin(math.radians(float(a1)))/float(s3)))
+            if a1 == '' and a2 != '' and a3 == '' and s1 != '' and s2 == '' and s3 != '':
+
+            if a1 == '' and a2 != '' and a3 == '' and s1 != '' and s2 != '' and s3 == '':
+                
+            if a1 == '' and a2 == '' and a3 != '' and s1 == '' and s2 != '' and s3 != '':
+
+            if a1 == '' and a2 == '' and a3 != '' and s1 != '' and s2 != '' and s3 == '':
+
+            #Triangle 2
+            if a4 != '' and a5 == '' and a6 == '' and s4 != '' and s5 != '' and s6 == '':
+                
+            if a4 != '' and a5 == '' and a6 == '' and s4 == '' and s5 != '' and s6 != '':
+
+            if a4 == '' and a5 != '' and a6 == '' and s4 != '' and s5 == '' and s6 != '':
+
+            if a4 == '' and a5 != '' and a6 == '' and s4 == '' and s5 != '' and s6 != '':
+                
+            if a4 == '' and a5 == '' and a6 != '' and s4 != '' and s5 == '' and s6 != '':
+
+            if a4 == '' and a5 == '' and a6 != '' and s4 != '' and s5 != '' and s6 == '':
+
             
+            
+            #solving for perimeter
             if s1 != '' and s2 != '' and s3 != '':
-                p1 = int(s1) + int(s2) + int(s3)
+                p1 = float(s1) + float(s2) + float(s3)
                 ip1.setText(p1)
             if s4 != '' and s5 != '' and s6 != '':
-                p2 = int(s4) + int(s5) + int(s6)
+                p2 = float(s4) + float(s5) + float(s6)
                 ip2.setText(p2)
+            
             
             
         #if pressed quit
