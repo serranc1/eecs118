@@ -159,14 +159,14 @@ def main():
 ##                print('Invalid combination of angle values')
             
             #SSS
-            if s1 != '' and s2 != '' and s3 != '':
+            if s1 != '' and s2 != '' and s3 != '' and a1 == '' and a2 == '' and a3 == '':
                 a1 = round(math.degrees(math.acos(round((math.pow(float(s2),2) + math.pow(float(s3),2) - math.pow(float(s1),2))/(2*float(s2)*float(s3)),2))),2)
                 a2 = round(math.degrees(math.acos(round((math.pow(float(s1),2) + math.pow(float(s3),2) - math.pow(float(s2),2))/(2*float(s1)*float(s3)),2))),2)
                 a3 = 180 - round(float(a1),2) - round(float(a2),2)
                 ia1.setText(a1)
                 ia2.setText(a2)
                 ia3.setText(a3)
-            if s4 != '' and s5 != '' and s6 != '':
+            if s4 != '' and s5 != '' and s6 != '' and a4 == '' and a5 == '' and a6 == '':
                 a4 = round(math.degrees(math.acos(round((math.pow(float(s5),2) + math.pow(float(s6),2) - math.pow(float(s4),2))/(2*float(s5)*float(s6)),2))),2)
                 a5 = round(math.degrees(math.acos(round((math.pow(float(s4),2) + math.pow(float(s6),2) - math.pow(float(s5),2))/(2*float(s4)*float(s6)),2))),2)
                 a6 = 180 - round(float(a4),2) - round(float(a5),2)
@@ -176,54 +176,54 @@ def main():
             #AAS
             #Triangle 1
             #solve for angle given two others
-            if a2 != '' and a3 != '':
+            if a2 != '' and a3 != '' and a1 == '':
                 a1 = 180 - round(float(a2),2) - round(float(a3),2)
                 ia1.setText(a1)
-            if a1 != '' and a3 != '':
+            if a1 != '' and a3 != '' and a2 == '':
                 a2 = 180 - round(float(a1),2) - round(float(a3),2)
                 ia2.setText(a2)
-            if a1 != '' and a2 != '':
+            if a1 != '' and a2 != '' and a3 == '':
                 a3 = 180 - round(float(a1),2) - round(float(a2),2)
                 ia3.setText(a3)
             #solve for the sides
-            if s1 != '':
+            if s1 != '' and s2 == '' and s3 == '':
                 s2 = round(math.sin(math.radians(float(a2)))*float(s1)/math.sin(math.radians(float(a1))),2)
                 s3 = round(math.sin(math.radians(float(a3)))*float(s1)/math.sin(math.radians(float(a1))),2)
                 is2.setText(s2)
                 is3.setText(s3)
-            if s2 != '':
+            if s2 != '' and s1 == '' and s3 == '':
                 s1 = round(math.sin(math.radians(float(a1)))*float(s2)/math.sin(math.radians(float(a2))),2)
                 s3 = round(math.sin(math.radians(float(a3)))*float(s2)/math.sin(math.radians(float(a2))),2)
                 is1.setText(s1)
                 is3.setText(s3)
-            if s3 != '':
+            if s3 != '' and s1 == '' and s2 == '':
                 s1 = round(math.sin(math.radians(float(a1)))*float(s3)/math.sin(math.radians(float(a3))),2)
                 s2 = round(math.sin(math.radians(float(a2)))*float(s3)/math.sin(math.radians(float(a3))),2)
                 is1.setText(s1)
                 is2.setText(s2)
             #Triangle 2
             #solve for angle given two others
-            if a5 != '' and a6 != '':
+            if a5 != '' and a6 != '' and a4 == '':
                 a4 = 180 - round(float(a5),2) - round(float(a6),2)
                 ia4.setText(a4)
-            if a4 != '' and a6 != '':
+            if a4 != '' and a6 != '' and a5 == '':
                 a5 = 180 - round(float(a4),2) - round(float(a6),2)
                 ia5.setText(a5)
-            if a4 != '' and a5 != '':
+            if a4 != '' and a5 != '' and a6 == '':
                 a6 = 180 - round(float(a4),2) - round(float(a5),2)
                 ia6.setText(a6)
             #solve for the sides
-            if s4 != '':
+            if s4 != '' and s5 == '' and s6 == '':
                 s5 = math.sin(math.radians(float(a5)))*float(s4)/math.sin(math.radians(float(a4)))
                 s6 = math.sin(math.radians(float(a6)))*float(s4)/math.sin(math.radians(float(a4)))
                 is5.setText(s5)
                 is6.setText(s6)
-            if s5 != '':
+            if s5 != '' and s4 == '' and s6 == '':
                 s4 = math.sin(math.radians(float(a4)))*float(s5)/math.sin(math.radians(float(a5)))
                 s6 = math.sin(math.radians(float(a6)))*float(s5)/math.sin(math.radians(float(a5)))
                 is4.setText(s4)
                 is6.setText(s6)
-            if s6 != '':
+            if s6 != '' and s4 == '' and s5 == '':
                 s4 = math.sin(math.radians(float(a4)))*float(s6)/math.sin(math.radians(float(a6)))
                 s5 = math.sin(math.radians(float(a5)))*float(s6)/math.sin(math.radians(float(a6)))
                 is4.setText(s4)
@@ -231,61 +231,61 @@ def main():
             #ASA
             #Triangle 1
             #solve for angle given two others
-            if a2 != '' and a3 != '':
+            if a2 != '' and a3 != '' and a1 == '':
                 a1 = 180 - round(float(a2),2) - round(float(a3),2)
                 ia1.setText(a1)
-            if a1 != '' and a3 != '':
+            if a1 != '' and a3 != '' and a2 == '':
                 a2 = 180 - round(float(a1),2) - round(float(a3),2)
                 ia2.setText(a2)
-            if a1 != '' and a2 != '':
+            if a1 != '' and a2 != '' and a3 == '':
                 a3 = 180 - round(float(a1),2) - round(float(a2),2)
                 ia3.setText(a3)
             #solve for the sides
-            if s1 != '':
+            if s1 != '' and s2 == '' and s3 == '':
                 s2 = math.sin(math.radians(float(a2)))*float(s1)/math.sin(math.radians(float(a1)))
                 s3 = math.sin(math.radians(float(a3)))*float(s1)/math.sin(math.radians(float(a1)))
                 is2.setText(s2)
                 is3.setText(s3)
-            if s2 != '':
+            if s2 != '' and s1 == '' and s3 == '':
                 s1 = math.sin(math.radians(float(a1)))*float(s2)/math.sin(math.radians(float(a2)))
                 s3 = math.sin(math.radians(float(a3)))*float(s2)/math.sin(math.radians(float(a2)))
                 is1.setText(s1)
                 is3.setText(s3)
-            if s3 != '':
+            if s3 != '' and s1 == '' and s2 == '':
                 s1 = math.sin(math.radians(float(a1)))*float(s3)/math.sin(math.radians(float(a3)))
                 s2 = math.sin(math.radians(float(a2)))*float(s3)/math.sin(math.radians(float(a3)))
                 is1.setText(s1)
                 is2.setText(s2)
             #Triangle 2
             #solve for angle given two others
-            if a5 != '' and a6 != '':
+            if a5 != '' and a6 != '' and a4 == '':
                 a4 = 180 - round(float(a5),2) - round(float(a6),2)
                 ia4.setText(a4)
-            if a4 != '' and a6 != '':
+            if a4 != '' and a6 != '' and a4 == '':
                 a5 = 180 - round(float(a4),2) - round(float(a6),2)
                 ia5.setText(a5)
-            if a4 != '' and a5 != '':
+            if a4 != '' and a5 != '' and a6 == '':
                 a6 = 180 - round(float(a4),2) - round(float(a5),2)
                 ia6.setText(a6)
             #solve for the sides
-            if s4 != '':
+            if s4 != '' and s5 == '' and s6 == '':
                 s5 = math.sin(math.radians(float(a5)))*float(s4)/math.sin(math.radians(float(a4)))
                 s6 = math.sin(math.radians(float(a6)))*float(s4)/math.sin(math.radians(float(a4)))
                 is5.setText(s5)
                 is6.setText(s6)
-            if s5 != '':
+            if s5 != '' and s4 == '' and s6 == '':
                 s4 = math.sin(math.radians(float(a4)))*float(s5)/math.sin(math.radians(float(a5)))
                 s6 = math.sin(math.radians(float(a6)))*float(s5)/math.sin(math.radians(float(a5)))
                 is4.setText(s4)
                 is6.setText(s6)
-            if s6 != '':
+            if s6 != '' and s4 == '' and s5 == '':
                 s4 = math.sin(math.radians(float(a4)))*float(s6)/math.sin(math.radians(float(a6)))
                 s5 = math.sin(math.radians(float(a5)))*float(s6)/math.sin(math.radians(float(a6)))
                 is4.setText(s4)
                 is5.setText(s5)
             #SAS
             #Triangle 1
-            if a1 != '' and s2 != '' and s3 != '':
+            if a1 != '' and a2 == '' and a3 == '' and s1 == '' and s2 != '' and s3 != '':
                 s1 = round(math.sqrt(math.pow(float(s2),2)+math.pow(float(s3),2)-2*float(s2)*float(s3)*math.cos(math.radians(float(a1)))),2)
                 is1.setText(s1)
                 if float(s2) > float(s3):
@@ -298,7 +298,7 @@ def main():
                     a3 = 180 - float(a1) - float(a2)
                     ia2.setText(a2)
                     ia3.setText(a3)
-            if a2 != '' and s1 != '' and s3 != '':
+            if a2 != '' and s1 == '' and s3 == '' and s1 != '' and s3 != '' and s2 == '':
                 s2 = math.sqrt(math.pow(float(s1),2)+math.pow(float(s3),2)-2*float(s1)*float(s3)*math.cos(math.radians(float(a2))))
                 is2.setText(s2)
                 if float(s1) > float(s3):
@@ -311,7 +311,7 @@ def main():
                     a3 = 180 - float(a1) - float(a2)
                     ia1.setText(a1)
                     ia3.setText(a3)
-            if a3 != '' and s1 != '' and s2 != '':
+            if a3 != '' and s1 == '' and s2 == '' and s1 != '' and s2 != '' and s3 == '':
                 s3 = math.sqrt(math.pow(float(s1),2)+math.pow(float(s2),2)-2*float(s1)*float(s2)*math.cos(math.radians(float(a3))))
                 is3.setText(s3)
                 if float(s1) > float(s2):
@@ -325,7 +325,7 @@ def main():
                     ia1.setText(a1)
                     ia2.setText(a2)
             #Triangle 2
-            if a4 != '' and s5 != '' and s6 != '':
+            if a4 != '' and a5 == '' and a6 == '' and s4 == '' and s5 != '' and s6 != '':
                 s4 = round(math.sqrt(math.pow(float(s5),2)+math.pow(float(s6),2)-2*float(s5)*float(s6)*math.cos(math.radians(float(a4)))),2)
                 is4.setText(s4)
                 if float(s5) > float(s6):
@@ -338,7 +338,7 @@ def main():
                     a6 = 180 - float(a4) - float(a5)
                     ia5.setText(a5)
                     ia6.setText(a6)
-            if a5 != '' and s4 != '' and s6 != '':
+            if a5 != '' and a4 == '' and a6 == '' and s4 != '' and s6 != '' and s5 == '':
                 s5 = round(math.sqrt(math.pow(float(s4),2)+math.pow(float(s6),2)-2*float(s4)*float(s6)*math.cos(math.radians(float(a5)))),2)
                 is5.setText(s5)
                 if float(s4) > float(s6):
@@ -351,7 +351,7 @@ def main():
                     a6 = 180 - float(a4) - float(a5)
                     ia4.setText(a4)
                     ia6.setText(a6)
-            if a6 != '' and s4 != '' and s5 != '':
+            if a6 != '' and a4 == '' and a5 == '' and s4 != '' and s5 != '' and s6 == '':
                 s6 = round(math.sqrt(math.pow(float(s4),2)+math.pow(float(s5),2)-2*float(s4)*float(s5)*math.cos(math.radians(float(a6)))),2)
                 is6.setText(s6)
                 if float(s4) > float(s5):
@@ -367,68 +367,68 @@ def main():
             #SSA
             #Triangle 1
             #a1 is known
-            if a1 != '' and s1 != '' and s3 != '':
+            if a1 != '' and a2 == '' and a3 == '' and s1 != '' and s3 != '' and s2 == '':
                 a3 = round(math.degrees(math.asin(round(float(s3)*math.sin(math.radians(float(a1)))/float(s1),2))),2)
                 a2 = 180 - float(a1) - float(a3)
                 ia3.setText(a3)
                 ia2.setText(a2)
-            if a1 != '' and s1 != '' and s2 != '':
+            if a1 != '' and a2 == '' and a3 == '' and s1 != '' and s2 != '' and s3 == '':
                 a2 = round(math.degrees(math.asin(round(float(s2)*math.sin(math.radians(float(a1)))/float(s1),2))),2)
                 a3 = 180 - float(a1) - float(a2)
                 ia3.setText(a3)
                 ia2.setText(a2)
             #a2 is known
-            if a2 != '' and s1 != '' and s2 != '':
+            if a2 != '' and a1 == '' and a3 == '' and s1 != '' and s2 != '' and s3 == '':
                 a1 = round(math.degrees(math.asin(round(float(s1)*math.sin(math.radians(float(a2)))/float(s2),2))),2)
                 a3 = 180 - float(a1) - float(a2)
                 ia3.setText(a3)
                 ia1.setText(a1)
-            if a2 != '' and s2 != '' and s3 != '':
+            if a2 != '' and a1 == '' and a3 == '' and s2 != '' and s3 != '' and s1 == '':
                 a3 = round(math.degrees(math.asin(round(float(s3)*math.sin(math.radians(float(a2)))/float(s2),2))),2)
                 a1 = 180 - float(a2) - float(a3)
                 ia3.setText(a3)
                 ia1.setText(a1)
             #a3 is known
-            if a3 != '' and s2 != '' and s3 != '':
+            if a3 != '' and a1 == '' and a2 == '' and s2 != '' and s3 != '' and s1 == '':
                 a2 = round(math.degrees(math.asin(round(float(s2)*math.sin(math.radians(float(a3)))/float(s3),2))),2)
                 a1 = 180 - float(a2) - float(a3)
                 ia2.setText(a2)
                 ia1.setText(a1)
-            if a3 != '' and s1 != '' and s3 != '':
+            if a3 != '' and a1 == '' and a2 == '' and s1 != '' and s3 != '' and s2 == '':
                 a1 = round(math.degrees(math.asin(round(float(s1)*math.sin(math.radians(float(a3)))/float(s3),2))),2)
                 a2 = 180 - float(a1) - float(a3)
                 ia2.setText(a2)
                 ia1.setText(a1)
             #Triangle 2
             #a4 is known
-            if a4 != '' and s4 != '' and s5 != '':
+            if a4 != '' and a5 == '' and a6 == '' and s4 != '' and s5 != '' and s6 == '':
                 a5 = round(math.degrees(math.asin(round(float(s5)*math.sin(math.radians(float(a4)))/float(s4),2))),2)
                 a6 = 180 - float(a4) - float(a5)
                 ia5.setText(a5)
                 ia6.setText(a6)
-            if a4 != '' and s4 != '' and s6 != '':
+            if a4 != '' and a5 == '' and a6 == '' and s4 != '' and s6 != '' and s5 == '':
                 a6 = round(math.degrees(math.asin(round(float(s6)*math.sin(math.radians(float(a4)))/float(s4),2))),2)
                 a5 = 180 - float(a4) - float(a6)
                 ia5.setText(a5)
                 ia6.setText(a6)
             #a5 is known
-            if a5 != '' and s4 != '' and s5 != '':
+            if a5 != '' and a4 == '' and a6 == '' and s4 != '' and s5 != '' and s6 == '':
                 a4 = round(math.degrees(math.asin(round(float(s4)*math.sin(math.radians(float(a5)))/float(s5),2))),2)
                 a6 = 180 - float(a4) - float(a5)
                 ia4.setText(a4)
                 ia6.setText(a6)
-            if a5 != '' and s5 != '' and s6 != '':
+            if a5 != '' and a4 == '' and a6 == '' and s5 != '' and s6 != '' and s4 == '':
                 a6 = round(math.degrees(math.asin(round(float(s6)*math.sin(math.radians(float(a5)))/float(s5),2))),2)
                 a4 = 180 - float(a5) - float(a6)
                 ia4.setText(a4)
                 ia6.setText(a6)
             #a6 is known    
-            if a6 != '' and s4 != '' and s6 != '':
+            if a6 != '' and a4 == '' and a5 == '' and s4 != '' and s6 != '' and s5 == '':
                 a4 = round(math.degrees(math.asin(round(float(s4)*math.sin(math.radians(float(a6)))/float(s6),2))),2)
                 a5 = 180 - float(a4) - float(a6)
                 ia4.setText(a4)
                 ia5.setText(a5)
-            if a6 != '' and s5 != '' and s6 != '':
+            if a6 != '' and a4 == '' and a5 == '' and s5 != '' and s6 != '' and s4 == '':
                 a5 = round(math.degrees(math.asin(round(float(s5)*math.sin(math.radians(float(a6)))/float(s6),2))),2)
                 a4 = 180 - float(a4) - float(a5)
                 ia4.setText(a4)
