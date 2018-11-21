@@ -98,6 +98,8 @@ def main():
     Text(Point(675,112.5),"Solve").draw(win)
     Text(Point(675,162.5),"Quit").draw(win)
     Text(Point(400,10),"Input values to solve:").draw(win)
+    diagram = Image(Point(500,200),"Problem 3.png")
+    diagram.draw(win)
     x=1
     while(x==1):
         response=win.getMouse()
@@ -484,7 +486,42 @@ def main():
             if a5 != '' and s4 != '':
                 h6 = round(round(float(s4),2)*math.sin(round(math.radians(float(a5)),2)),2)
                 ih6.setText(h6)
+
+            #solving for area
+            if s1 != '' and h1 != '':
+                ar1 = 0.5 * round(float(s1),2) * round(float(h1),2)
+                iar1.setText(ar1)
+            if s2 != '' and h2 != '':
+                ar1 = 0.5 * round(float(s2),2) * round(float(h2),2)
+                iar1.setText(ar1)
+            if s3 != '' and h3 != '':
+                ar1 = 0.5 * round(float(s3),2) * round(float(h3),2)
+                iar1.setText(ar1)
+            if s4 != '' and h4 != '':
+                ar2 = 0.5 * round(float(s4),2) * round(float(h4),2)
+                iar2.setText(ar2)
+            if s5 != '' and h6 != '':
+                ar2 = 0.5 * round(float(s5),2) * round(float(h5),2)
+                iar2.setText(ar2)
+            if s6 != '' and h6 != '':
+                ar2 = 0.5 * round(float(s6),2) * round(float(h6),2)
+                iar2.setText(ar2)
             
+            #solving for s7 and s8
+            if s4 != '' and s8 != '':
+                s7 = round(float(s4),2) - round(float(s8),2)
+                is7.setText(s7)
+            if s4 != '' and s7 != '':
+                s8 = round(float(s4),2) - round(float(s7),2)
+                is8.setText(s8)
+
+            #solving for a7 and a8
+            if a3 != '' and a8 != '' and a7:
+                a7 = 180 - round(float(a3),2) - round(float(a8),2)
+                ia7.setText(a7)
+            if a3 != '' and a7 != '':
+                a8 = 180 - round(float(a3),2) - round(float(a7),2)
+                ia8.setText(a8)
             
         #if pressed quit
         if 650 <= response.getX()<= 725 and 150 <= response.getY()<= 175:       
