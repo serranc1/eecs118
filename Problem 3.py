@@ -443,6 +443,47 @@ def main():
                 p2 = float(s4) + float(s5) + float(s6)
                 ip2.setText(p2)
             
+            #solving for heights
+            #Triangle 1
+            #given one angle and 90 degrees, do AAS
+            if a2 != '' and s3 != '':
+                h1 = round(round(float(s3),2)*math.sin(round(math.radians(float(a2)),2)),2)
+                ih1.setText(h1)
+            if a3 != '' and s2 != '':
+                h1 = round(round(float(s2),2)*math.sin(round(math.radians(float(a3)),2)),2)
+                ih1.setText(h1)
+            if a1 != '' and s3 != '':
+                h2 = round(round(float(s3),2)*math.sin(round(math.radians(float(a1)),2)),2)
+                ih2.setText(h2)
+            if a3 != '' and s1 != '':
+                h2 = round(round(float(s1),2)*math.sin(round(math.radians(float(a3)),2)),2)
+                ih2.setText(h2)
+            if a1 != '' and s2 != '':
+                h3 = round(round(float(s2),2)*math.sin(round(math.radians(float(a1)),2)),2)
+                ih3.setText(h3)
+            if a2 != '' and s1 != '':
+                h3 = round(round(float(s1),2)*math.sin(round(math.radians(float(a2)),2)),2)
+                ih3.setText(h3)
+            #Triangle 2
+            #given one angle and 90 degrees, do AAS
+            if a5 != '' and s6 != '':
+                h4 = round(round(float(s6),2)*math.sin(round(math.radians(float(a5)),2)),2)
+                ih4.setText(h1)
+            if a6 != '' and s5 != '':
+                h4 = round(round(float(s5),2)*math.sin(round(math.radians(float(a6)),2)),2)
+                ih4.setText(h4)
+            if a4 != '' and s6 != '':
+                h5 = round(round(float(s6),2)*math.sin(round(math.radians(float(a4)),2)),2)
+                ih5.setText(h5)
+            if a6 != '' and s4 != '':
+                h5 = round(round(float(s4),2)*math.sin(round(math.radians(float(a6)),2)),2)
+                ih5.setText(h5)
+            if a4 != '' and s5 != '':
+                h6 = round(round(float(s5),2)*math.sin(round(math.radians(float(a4)),2)),2)
+                ih6.setText(h6)
+            if a5 != '' and s4 != '':
+                h6 = round(round(float(s4),2)*math.sin(round(math.radians(float(a5)),2)),2)
+                ih6.setText(h6)
             
             
         #if pressed quit
