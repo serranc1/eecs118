@@ -12,9 +12,9 @@ def set_vertex(name, x, y):
 def get_value(name):
     return name
 def get_all():
-    return {a1, a2, a3, s1, s2, s3, s4, s5, s6, s7, h1, h2, h3, L1, L2, L3, L4, radius, diameter, circumference, p, art, arc, ar1}
+    return {a1, a2, a3, s1, s2, s3, s4, s5, s6, h1, h2, h3, L1, L2, L3, L4, radius, diameter, circumference, p, art, arc, ar1, ar2, ar3}
 def main():
-    win = GraphWin("Problem Set R #1", 800, 500)
+    win = GraphWin("Problem Set R #2", 800, 500)
     ia1=Entry(Point(150,50),10)
     ia2=Entry(Point(150,75),10)
     ia3 = Entry(Point(150,100),10)
@@ -31,13 +31,16 @@ def main():
     iL1 = Entry(Point(300,50),10)
     iL2 = Entry(Point(300,75),10)
     iL3 = Entry(Point(300,100),10)
-    iradius = Entry(Point(300,125),10)
-    idiameter = Entry(Point(300,150),10)
-    icircumference = Entry(Point(300,175),10)
-    ip = Entry(Point(300,200),10)
-    iart = Entry(Point(300,225),10)
-    iarc = Entry(Point(300,250),10)
-    iar1 = Entry(Point(300,275),10)
+    iL4 = Entry(Point(300,125),10)
+    iradius = Entry(Point(300,150),10)
+    idiameter = Entry(Point(300,175),10)
+    icircumference = Entry(Point(300,200),10)
+    ip = Entry(Point(300,225),10)
+    iart = Entry(Point(300,250),10)
+    iarc = Entry(Point(300,275),10)
+    iar1 = Entry(Point(300,300),10)
+    iar2 = Entry(Point(300,325),10)
+    iar3 = Entry(Point(300,350),10)
     rect=Rectangle(Point(50,25),Point(750,450)).draw(win)
     ia1.draw(win)
     ia2.draw(win)
@@ -55,6 +58,7 @@ def main():
     iL1.draw(win)
     iL2.draw(win)
     iL3.draw(win)
+    iL4.draw(win)
     iradius.draw(win)
     idiameter.draw(win)
     icircumference.draw(win)
@@ -62,6 +66,8 @@ def main():
     iart.draw(win)
     iarc.draw(win)
     iar1.draw(win)
+    iar2.draw(win)
+    iar3.draw(win)
     Text(Point(80,50),"a1").draw(win)
     Text(Point(80,75),"a2").draw(win)
     Text(Point(80,100),"a3").draw(win)
@@ -78,19 +84,22 @@ def main():
     Text(Point(230,50),"L1").draw(win)
     Text(Point(230,75),"L2").draw(win)
     Text(Point(230,100),"L3").draw(win)
-    Text(Point(230,125),"r").draw(win)
-    Text(Point(230,150),"d").draw(win)
-    Text(Point(230,175),"c").draw(win)
-    Text(Point(230,200),"p").draw(win)
-    Text(Point(230,225),"art").draw(win)
-    Text(Point(230,250),"arc").draw(win)
-    Text(Point(230,275),"ar1").draw(win)
+    Text(Point(230,125),"L4").draw(win)
+    Text(Point(230,150),"r").draw(win)
+    Text(Point(230,175),"d").draw(win)
+    Text(Point(230,200),"c").draw(win)
+    Text(Point(230,225),"p").draw(win)
+    Text(Point(230,250),"art").draw(win)
+    Text(Point(230,275),"arc").draw(win)
+    Text(Point(230,300),"ar1").draw(win)
+    Text(Point(230,325),"ar2").draw(win)
+    Text(Point(230,350),"ar3").draw(win)
     Solve=Rectangle(Point(650,100),Point(725,125)).draw(win)
     Quit=Rectangle(Point(650,150),Point(725,175)).draw(win)
     Text(Point(675,112.5),"Solve").draw(win)
     Text(Point(675,162.5),"Quit").draw(win)
     Text(Point(400,10),"Input values to solve:").draw(win)
-    diagram = Image(Point(500,200),"P1.png")
+    diagram = Image(Point(500,200),"P2.png")
     diagram.draw(win)
     x=1
     while(x==1):
@@ -343,16 +352,16 @@ def main():
 
             #solving for s4, s5, s6, s7
             if s2 != '' and s7 != '':
-                s6 = round(float(s2),2) - round(float(s7),2)
-                is6.setText(s6)
-            if s2 != '' and s6 != '':
-                s7 = round(float(s2),2) - round(float(s6),2)
+                s4 = round(float(s2),2) - round(float(s7),2)
+                is4.setText(s4)
+            if s2 != '' and s4 != '':
+                s7 = round(float(s2),2) - round(float(s4),2)
                 is7.setText(s7)
-            if s1 != '' and s5 != '':
-                s4 = round(float(s1),2) - round(float(s5),2)
+            if s3 != '' and s5 != '':
+                s6 = round(float(s3),2) - round(float(s5),2)
                 is6.setText(s6)
-            if s1 != '' and s4 != '':
-                s5 = round(float(s1),2) - round(float(s4),2)
+            if s3 != '' and s6 != '':
+                s5 = round(float(s3),2) - round(float(s6),2)
                 is5.setText(s5)
             
             #solving for radius and diameter
@@ -377,12 +386,14 @@ def main():
                 iarc.setText(arc)
             
             #solving for arc lengths
-            if L2 != '' and L3 != '' and circumference != '':
-                L1 = round(float(circumference),2) - round(float(L2),2) - round(float(L3),2)
-            if L1 != '' and L3 != '' and circumference != '':
-                L2 = round(float(circumference),2) - round(float(L1),2) - round(float(L3),2)
-            if L1 != '' and L2 != '' and circumference != '':
-                L3 = round(float(circumference),2) - round(float(L1),2) - round(float(L2),2)
+            if L2 != '' and L3 != '' and L4 != '' and circumference != '':
+                L1 = round(float(circumference),2) - round(float(L2),2) - round(float(L3),2) - round(float(L4),2)
+            if L1 != '' and L3 != '' and L4 != '' and circumference != '':
+                L2 = round(float(circumference),2) - round(float(L1),2) - round(float(L3),2) - round(float(L4),2)
+            if L1 != '' and L2 != '' and L4 != '' and circumference != '':
+                L3 = round(float(circumference),2) - round(float(L1),2) - round(float(L2),2) - round(float(L4),2)
+            if L1 != '' and L2 != '' and L3 != '' and circumference != '':
+                L4 = round(float(circumference),2) - round(float(L1),2) - round(float(L2),2) - round(float(L3),2)
 
             #solving for circular segment areas
             if radius != '' and s6 != '':
@@ -395,3 +406,4 @@ def main():
     win.close()
 print("GUI currently not integrated with web interface.")
 main()
+
