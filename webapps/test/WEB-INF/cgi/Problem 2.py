@@ -404,6 +404,5 @@ def main():
 
     
     win.close()
-print("GUI currently not integrated with web interface.")
 main()
 
