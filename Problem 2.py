@@ -4,6 +4,7 @@ import time
 from time import*
 import math
 from math import*
+import cgi
 def set_value(name, value):
     name = value
 def set_vertex(name, x, y):
@@ -11,7 +12,7 @@ def set_vertex(name, x, y):
 def get_value(name):
     return name
 def get_all():
-    return {a1, a2, a3, s1, s2, s3, s4, s5, s6, h1, h2, h3, L1, L2, L3, L4, radius, diameter, circumference, p, ar1, ar2}
+    return {a1, a2, a3, s1, s2, s3, s4, s5, s6, h1, h2, h3, L1, L2, L3, L4, radius, diameter, circumference, p, art, arc, ar1, ar2, ar3}
 def main():
     win = GraphWin("Problem Set R #2", 800, 500)
     ia1=Entry(Point(150,50),10)
@@ -23,9 +24,10 @@ def main():
     is4 = Entry(Point(150,200),10)
     is5 = Entry(Point(150,225),10)
     is6 = Entry(Point(150,250),10)
-    ih1 = Entry(Point(150,275),10)
-    ih2 = Entry(Point(150,300),10)
-    ih3 = Entry(Point(150,325),10)
+    is7 = Entry(Point(150,275),10)
+    ih1 = Entry(Point(150,300),10)
+    ih2 = Entry(Point(150,325),10)
+    ih3 = Entry(Point(150,350),10)
     iL1 = Entry(Point(300,50),10)
     iL2 = Entry(Point(300,75),10)
     iL3 = Entry(Point(300,100),10)
@@ -49,6 +51,7 @@ def main():
     is4.draw(win)
     is5.draw(win)
     is6.draw(win)
+    is7.draw(win)
     ih1.draw(win)
     ih2.draw(win)
     ih3.draw(win)
@@ -74,9 +77,10 @@ def main():
     Text(Point(80,200),"s4").draw(win)
     Text(Point(80,225),"s5").draw(win)
     Text(Point(80,250),"s6").draw(win)
-    Text(Point(80,275),"h1").draw(win)
-    Text(Point(80,300),"h2").draw(win)
-    Text(Point(80,325),"h3").draw(win)
+    Text(Point(80,275),"s7").draw(win)
+    Text(Point(80,300),"h1").draw(win)
+    Text(Point(80,325),"h2").draw(win)
+    Text(Point(80,350),"h3").draw(win)
     Text(Point(230,50),"L1").draw(win)
     Text(Point(230,75),"L2").draw(win)
     Text(Point(230,100),"L3").draw(win)
@@ -95,7 +99,7 @@ def main():
     Text(Point(675,112.5),"Solve").draw(win)
     Text(Point(675,162.5),"Quit").draw(win)
     Text(Point(400,10),"Input values to solve:").draw(win)
-    diagram = Image(Point(500,200),"Problem 2.png")
+    diagram = Image(Point(500,200),"P2.png")
     diagram.draw(win)
     x=1
     while(x==1):
@@ -111,6 +115,7 @@ def main():
             s4=is4.getText()
             s5=is5.getText()
             s6=is6.getText()
+            s7=is7.getText()
             h1=ih1.getText()
             h2=ih2.getText()
             h3=ih3.getText()
@@ -399,4 +404,6 @@ def main():
 
     
     win.close()
+print("GUI currently not integrated with web interface.")
 main()
+

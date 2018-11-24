@@ -4,10 +4,11 @@ import time
 from time import*
 import math
 from math import*
+import cgi
 def set_value(name, value):
     name = value
 def set_vertex(name, x, y):
-    name = Point[x,y]
+    name = Point(x,y)
 def get_value(name):
     return name
 def get_all():
@@ -98,7 +99,7 @@ def main():
     Text(Point(675,112.5),"Solve").draw(win)
     Text(Point(675,162.5),"Quit").draw(win)
     Text(Point(400,10),"Input values to solve:").draw(win)
-    diagram = Image(Point(500,200),"Problem 3.png")
+    diagram = Image(Point(500,200),"P3.png")
     diagram.draw(win)
     x=1
     while(x==1):
@@ -529,4 +530,5 @@ def main():
 
     
     win.close()
+print("GUI currently not integrated with web interface.")
 main()
