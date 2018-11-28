@@ -1,5 +1,6 @@
 import cgi
 #To access the website, go to http://127.0.0.1:8080/test/cgi-bin/tpmain.py
+#To ensure that the webpage works, change the param-name in the cgi servlet to the directory where python.exe is (Ex: C:\Python34\python.exe)
 print("Content-Type: text/html")
 print()
 print("<form id='p1' method='post' action='http://127.0.0.1:8080/test/cgi-bin/Problem 1.py'>")
